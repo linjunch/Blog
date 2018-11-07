@@ -1,2 +1,2 @@
 # Blog  操作说明
-{说明}（ https://linjunch.github.io/Blog/）
+[说明]（ https://linjunch.github.io/Blog/）
