@@ -66,9 +66,6 @@ app.get("/create",(req,res)=>{
     }
 
 });
-app.get("/list",(req,res)=>{
-    res.render('list');
-});
 app.post("/saveInfo",urlencodedParser,(req,res)=>{
     var obj = {
         user:req.body.user,
