@@ -1,0 +1,111 @@
+.myinfo{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.title{
+	margin-top: 50px;
+}
+sup{
+	color: red;
+	font-weight: bold;
+}
+body{
+	font-size: 14px;
+}
+#personal{
+	resize: none;
+	height: 100px;
+}
+.menu{
+	position: fixed;
+	right: 40px;
+	top: 10px;
+	cursor: pointer;
+}
+.menu ul{
+	position: absolute;
+    width: 38px;
+    padding: 4px;
+    left: -8px;
+    top: 26px;
+    border: 1px solid #ccc;
+    display: none;
+}
+.list{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.list .media-body{
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+.myinfo>li{
+	list-style: none;
+	position: relative;
+	border: 1px solid #cccccc;
+	margin-bottom: 10px;
+}
+.myinfo>li:last-child{
+	margin-bottom: 0;
+}
+.myinfo>li>.operate>.a,.myinfo>li>.operate>.b{
+	display: inline-block;
+	width: 50%;
+	height: 20px;
+	cursor: pointer;
+	color: #808080;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+/*ul>li>.b{*/
+	/**/
+	/*cursor: pointer;*/
+	/*color: #808080;*/
+/*}*/
+ul>li>.operate>.a:hover,ul>li>.operate>.b:hover{
+	color: #eb7350;
+}
+.more,.all,.newAll,.loading{
+	text-align: center;
+}
+.more{
+	cursor: pointer;
+}
+.newAll{
+	display: none;
+}
+.more:hover{
+	color: red;
+}
+h3{
+	margin-top: 10px;
+}
+.tt-uesr{
+	color: #333;
+	font-size: 14px;
+	font-weight: 700;
+	cursor: pointer;
+}
+.tt-uesr:hover{
+	color: #eb7350;
+}
+.tt-time{
+	color: #808080;
+}
+.tt-blog{
+	padding: 1px 0 3px;
+	overflow: hidden;
+	line-height: 23px;
+	word-wrap: break-word;
+}
+.tt-id{
+	display: none;
+}
+.tt-color{
+	display: none;
+}

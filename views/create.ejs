@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title><%= user %>的博客</title>
+	<link rel="stylesheet" href="../public/css/bootstrap.css">
+	<link rel="stylesheet" href="../public/css/style.css">
+	<link rel="stylesheet" href="../public/css/creat.css">
+</head>
+<body>
+<button class="quit"><a href="http://localhost:8989/quit">x</a></button>
+<div class="menu">
+	<img src="../public/images/menu.png" alt="" width="18px">
+	<ul class="list-unstyled">
+		<li><a href="http://localhost:8989/login">登录</a></li>
+		<li><a href="http://localhost:8989/register">注册</a></li>
+	</ul>
+</div>
+<h2 class="text-center title"><span class="user"><%= user %></span>的博客</h2>
+<form class="myinfo">
+	<div class="form-group">
+		<label for="exampleInputEmail1">标题<sup>*</sup></label>
+		<span class="tip-title"></span>
+		<input type="text" class="form-control" id="exampleInputEmail1" placeholder="标题">
+	</div>
+	<div class="form-group">
+		<label for="personal">内容<sup>*</sup></label>
+		<span class="tip-text"></span>
+		<textarea name=""  cols="30" rows="10" class="form-control" id="personal"></textarea>
+	</div>
+	<button type="submit" class="btn btn-primary tweet w100">发布</button>
+</form>
+<ul class="myinfo">
+	<% for(var i=0;i<tweet.length;i++){ %>
+	<li class="tt">
+		<p class="tt-id"><%= tweet[tweet.length-i-1]._id %></p>
+		<p class="tt-uesr"><%= tweet[tweet.length-i-1].user %>:</p>
+		<p class="tt-time"><%= tweet[tweet.length-i-1].time %> form 见面不爽就锤死对面的 锤子手机</p>
+		<h3 class="tt-title"><%= tweet[tweet.length-i-1].title %></h3>
+		<p class="tt-blog"><%= tweet[tweet.length-i-1].blog %></p>
+		<p class="tt-color"><%= tweet[tweet.length-i-1].color %></p>
+		<div class="operate clearfix">
+			<span onclick="up(this)" class="a fl">
+				<span class="glyphicon glyphicon-thumbs-up"></span>
+				(<span class="tt-up"><%= tweet[tweet.length-i-1].praise.length %></span>)
+			</span>
+			<span onclick="comment(this)" class="b fr">
+				<span class="glyphicon glyphicon-comment
+"></span>(
+				<span class="tt-cmt"><%= tweet[tweet.length-i-1].comment.length %></span>
+				)
+			</span>
+		</div>
+		<div class="cmt">
+			<input type="text" class="form-control w80 cmt-ipt"  placeholder="评论">
+			<button type="submit" class="btn btn-primary w20 fr cmt-btn">评论</button>
+			<ul class="cmt-list list-unstyled">
+				<% for(var j=0;j<tweet[tweet.length-i-1].comment.length;j++){ %>
+				<li class="clearfix">
+					<b class="cmt-user"><%= tweet[tweet.length-i-1].comment[tweet[tweet.length-i-1].comment.length-j-1].cmter %>:</b>
+					<span class="cmt-txt"><%= tweet[tweet.length-i-1].comment[tweet[tweet.length-i-1].comment.length-j-1].cmt %></span>
+					<span class="cmt-time fr"><%= tweet[tweet.length-i-1].comment[tweet[tweet.length-i-1].comment.length-j-1].time %></span>
+				</li>
+				<% } %>
+			</ul>
+		</div>
+	</li>
+	<% } %>
+</ul>
+<% if (more){%>
+<p class="more">加载更多+</p>
+<%}else{%>
+<p class="all">已加载全部</p>
+<% } %>
+<p class="newAll">已加载全部</p>
+<p class="loading">加载中...</p>
+
+
+
+<script src="../public/js/jquery.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/my.js"></script>
+<script src="../public/js/create.js"></script>
+
+</body>
+</html>

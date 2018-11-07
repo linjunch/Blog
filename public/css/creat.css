@@ -1,0 +1,57 @@
+.quit{
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #FFFFFF;
+    border: none;
+}
+.quit a{
+    color: black;
+    text-decoration: none;
+}
+.quit a:hover{
+    color: red;
+}
+.current{
+    color: #eb7350!important;
+}
+.operate{
+    display: block;
+}
+.w20{
+    width: 20% !important;
+}
+.w80{
+    display: inline-block!important;
+    width: 79% !important;
+}
+.w100{
+   width: 100% !important;
+}
+.cmt{
+    margin: 10px;
+    display: none;
+    /*border: 1px solid #cccccc;*/
+}
+.cmt-list{
+    margin-left: 20px;
+}
+.cmt-list li{
+    border-bottom: 1px solid #ccc;
+}
+.cmt-time{
+    color: #808080;
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.loading{
+    display: none;
+}
